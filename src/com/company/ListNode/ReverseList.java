@@ -36,15 +36,14 @@ public class ReverseList {
         ListNode preNode=null;
         ListNode pNode=head;
         ListNode reverseNode=null;
-
         while (pNode!=null){
-            ListNode pNextNode=pNode.nextNode;
-            if(pNextNode==null){
+            ListNode nextNode=pNode.nextNode;
+            if(nextNode==null){
                 reverseNode=pNode;
             }
             pNode.nextNode=preNode;
             preNode=pNode;
-            pNode=pNextNode;
+            pNode=nextNode;
         }
 
 
