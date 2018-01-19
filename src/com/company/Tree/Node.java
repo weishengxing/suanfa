@@ -12,4 +12,7 @@ public class Node {
         this.right=null;
         this.left=null;
     }
+    public Node(){
+
+    }
 }
