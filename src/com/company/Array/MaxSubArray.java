@@ -10,9 +10,9 @@ public class MaxSubArray {
     }
 
     public static int MaxSubArray(int data[],int n){
-        int nstart=data[n-1];
-        int nall=data[n-1];
-        for(int i=n-2;i>=0;i--){
+        int nstart=data[0];
+        int nall=data[0];
+        for(int i=1;i<n;i++){
             nstart=max(data[i],data[i]+nstart);
             nall=max(nall,nstart);
         }
@@ -20,7 +20,7 @@ public class MaxSubArray {
 
     }
     public static void main(String[] args){
-        int[] array={1,-2,4,8,-4,7,-1,-5};
+        int[] array={1,-2,4,8,-4,7,-1,3,-5,6};
         System.out.println(MaxSubArray(array,array.length));
     }
 }

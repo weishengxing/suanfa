@@ -13,13 +13,15 @@ public class QuickSort {
 				j--;
 			}
 			if(i<j){
-				item[i++]=item[j];
+				item[i]=item[j];
+                 i++;
 			}
 			while (i<j&&item[i]<=index){
 				i++;
 			}
 			if(i<j){
-				item[j--]=item[i];
+				item[j]=item[i];
+				j--;
 			}
 		}
 		item[i]=index;
@@ -32,7 +34,7 @@ public class QuickSort {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int item[] = { 12, 21, 13, 18, 9,11, 15, 17, 14, 16, 10, 10,1};
+		int item[] = { 12, 21, 13, 18, 9,11, 15, 17, 14, 16, 10, 10,1,5};
 		sort(item);
 		for (int i = 0; i < item.length; i++) {
 			System.out.print(item[i] + "    ");

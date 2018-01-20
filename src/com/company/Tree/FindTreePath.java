@@ -6,7 +6,6 @@ import java.util.Stack;
  * Created by wsx on 2018/1/19.
  * 输入一颗二叉树和一个整数，打印出二叉树中结点值的和为输入整数的所
  * 有路径。从树的根节点开始往下一直到叶结点所经过的结点形成一条路径。
- * tip：深搜
  */
 public class FindTreePath {
     public static void init(Node node,int sum){
@@ -26,6 +25,7 @@ public class FindTreePath {
                     System.out.print(path+" ");
                 }
                 System.out.println();
+
             }
         }
         if(node.left!=null){
@@ -53,7 +53,7 @@ public class FindTreePath {
         node2.date=12;
         node3.date=4;
         node4.date=7;
-        init(root1,19);
+        init(root1,22);
 
     }
 }
